@@ -3,24 +3,27 @@
 /*amatic font family: font-family: 'Amatic SC', cursive;  */
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC:700,400);
 
-body {
-  background: #222;
-  text-align: center;
-}
 /* NAV SECTION */
 nav {
   background-color: #236192;
-  position: fixed;
-  height: 100%;
-  padding: 30px 25px;
+  width: 100%;
+  padding: 10px;
+  z-index: 1000;
 }
-  .play-button {
-    font-size: 20px;
+
+  .reset {
+    font-size: 36px;
     color: whitesmoke;
-    padding: 10px 25px;
+    padding: 5px 35px;
     background: #333;
     margin: 10px 0 20px;
     border-radius: 10px;
+    font-family: 'Amatic SC', cursive;
+  }
+
+    .reset:hover {
+      background: whitesmoke;
+      color: #333;
   }
 
     .player {
@@ -28,28 +31,97 @@ nav {
       padding: 5px 10px;
       font-size: 18px;
     }
+.responsive-nav {
+  display: none;
+}
+.menu-img {
+  width: 60px;
+  height: 60px;
+  padding: 10px 5px 5px;
+  -webkit-filter: grayscale(100%);
+}
+.menu-img:hover {
+  -webkit-filter: grayscale(1%);
 
+}
 
 /* HEADINGS */
 h1{
-  font-size: 90px;
+  font-size: 72px;
   color: #fff;
   font-family: 'Amatic SC', cursive;
+  font-weight: bold;
   margin: 0px;
   padding: 10px;
 }
 h2{
   color: #fff;
+  font-size: 48px;
 }
 h3 {
   font-family: 'Amatic SC', cursive;
+  font-weight: bold;
   font-size: 100px;
   color: #fff;
 }
-h4{
-  margin: 5px 10px;
-  padding: 5px;
+
+
+/* body/ table */
+body {
+  margin: 0 auto;
+  text-align: center;
+  background: #333;
 }
+body .turn {
+  margin-bottom: 10px;
+}
+body table {
+  border-collapse: collapse;
+  width: 400px;
+  margin: 0 auto;
+}
+body table td {
+  width: 125px;
+  height: 125px;
+  border: 2px solid #fff;
+}
+body table td:before {
+  font-size: 22px;
+  line-height: 24px;
+}
+body table td.cross:before {
+  content: "X";
+  color: #fff;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 72px;
+}
+body table td.circle:before {
+  content: "O";
+  color: #fff;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 72px;
+}
+
+.messages {
+  font-size: 24px;
+  color: whitesmoke;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+}
+.turn {
+  font-size: 38px;
+  color: whitesmoke;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+}
+.body-section {
+  padding: 50px 0px;
+}
+
+
+/* Container */
 
 .container {
   margin: 0 auto;
@@ -57,10 +129,44 @@ h4{
   text-align: center;
 }
 
+/* FOOTER SECTION */
 
-.game-board {
-  width: 500px;
-  height: 500px;
-  border: 5px solid #fff;
+footer {
+  background: #333;
   margin: 0 auto;
+  text-align: center;
+  width: 100%
+}
+
+.legal-info {
+  color: #fff;
+  padding: 20px;
+}
+
+
+
+
+/* responsive */
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: 800px;
+  }
+  nav {
+    display: none;
+  }
+  .responsive-nav {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    display: block;
+  }
+  .body-section {
+    padding: 10px 0px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
 }
